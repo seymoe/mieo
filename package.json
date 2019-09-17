@@ -1,0 +1,33 @@
+{
+  "name": "mieo",
+  "version": "0.0.1",
+  "description": "A simple, fast, and universality command line tools.",
+  "main": "index.js",
+  "bin": {
+    "mieo": "./bin/mieo"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seymoe/mieo.git"
+  },
+  "keywords": [
+    "mieo",
+    "cli"
+  ],
+  "author": "seymoe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seymoe/mieo/issues"
+  },
+  "homepage": "https://github.com/seymoe/mieo#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^3.0.1",
+    "figlet": "^1.2.4",
+    "mkdirp": "^0.5.1",
+    "osenv": "^0.1.5"
+  }
+}
