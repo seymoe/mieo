@@ -15,7 +15,7 @@ const initScript = require('./scripts/init')
 
 // 检测 Node 版本，主版本最低要求为 8
 if (major < 8) {
-  console.error(
+  chalk.red(
     'You are running Node ' +
     currentNodeVersion +
     '.\n' +
@@ -64,12 +64,8 @@ class Mieo extends Cli {
       fs.writeFileSync(pkgFile, JSON.stringify({
         list: [
           {
-            name: 'vue-admin-template',
-            remote: 'https://github.com/PanJiaChen/vue-admin-template'
-          },
-          {
-            name: 'vue-typescript-admin-template',
-            remote: 'https://github.com/Armour/vue-typescript-admin-template'
+            name: 'mieotpl-egg-mongoo-ts',
+            remote: 'https://github.com/seymoe/mieotpl-egg-mongoo-ts.git'
           }
         ]
       }))
