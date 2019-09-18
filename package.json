@@ -1,6 +1,6 @@
 {
   "name": "mieo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple, fast, and universality command line tools.",
   "main": "index.js",
   "bin": {
