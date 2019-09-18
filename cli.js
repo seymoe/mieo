@@ -10,10 +10,11 @@ class Cli {
   checkCliUpdate() {
     try {
       const name = pkg.name
-      const version = pkg.version
-      const ltsVersion = execSync(`npm view ${name} version`) + ''
-      if (version === version) {
-        this._log(`⚠️ The cli version is to old, we recommend execute\n${chalk.red(`npm i -g ${name}@latest`)}\nto upgrade cli： ${version} -> ${ltsVersion}`)
+      const version = `"${pkg.version}"`
+      const ltsVersion = execSync(`npm view ${name} version --json`) + ''
+      if (version !== ltsVersion.trim()) {
+        this._log(`⚠️ The cli version is to old, we recommend execute ${chalk.red(`npm i -g ${name}@latest`)} to upgrade cli： ${version} -> ${ltsVersion}`)
+        process.exit(1)
       }
     } catch (err) {
       this._log('Check Upgrading failed.')

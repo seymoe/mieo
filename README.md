@@ -17,4 +17,4 @@ mieo init demo
 
 # Template List
 
-+ [egg-mongoo-ts](https://github.com/seymoe/mieotpl-egg-mongoo-ts.git) A Template build with Eggjs, Mongoo and TypeScript.
++ [egg-mongoo-ts](https://github.com/seymoe/mieotpl-egg-mongoo-ts.git) A Template build with Eggjs, Mongoose and TypeScript.

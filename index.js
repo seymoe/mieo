@@ -36,7 +36,7 @@ class Mieo extends Cli {
       tpl: templateDir
     }
     // 检查更新
-    // this.checkCliUpdate()
+    this.checkCliUpdate()
     // 创建存储模版的文件夹
     this.checkTemplateDir()
     // 初始化
