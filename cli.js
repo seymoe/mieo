@@ -4,8 +4,12 @@ const fs = require('fs')
 const chalk = require('chalk')
 const figlet = require('figlet')
 const pkg = require('./package.json')
+const config = require('./config.json')
 
 class Cli {
+  constructor() {
+    this.cliConfig = config
+  }
   // 检查版本，如果过低则提示更新
   checkCliUpdate() {
     try {
@@ -14,19 +18,17 @@ class Cli {
       const ltsVersion = execSync(`npm view ${name} version --json`) + ''
       if (version !== ltsVersion.trim()) {
         this._log(`⚠️ The cli version is to old, we recommend execute ${chalk.red(`npm i -g ${name}@latest`)} to upgrade cli： ${version} -> ${ltsVersion}`)
-        process.exit(1)
+        process.exit(0)
       }
     } catch (err) {
       this._log('Check Upgrading failed.')
+      process.exit(0)
     }
   }
 
   // 获取模版列表
-  getTemplateList(targetDir) {
-    const tplFile = path.resolve(targetDir, 'template.json')
-    if (!fs.existsSync(tplFile)) return []
-    const tplJson = require(tplFile)
-    return tplJson.list || []
+  getTemplateList() {
+    return this.cliConfig.list || []
   }
 
   // 命令行输出

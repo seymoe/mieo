@@ -1,0 +1,12 @@
+{
+  "list": [
+    {
+      "name": "mieotpl-egg-mongoo-ts",
+      "remote": "https://github.com/seymoe/mieotpl-egg-mongoo-ts.git"
+    },
+    {
+      "name": "mieotpl-react-antd-ts",
+      "remote": "https://github.com/seymoe/mieotpl-react-antd-ts.git"
+    }
+  ]
+}
